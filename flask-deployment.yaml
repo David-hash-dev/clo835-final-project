@@ -18,7 +18,7 @@ spec:
       - name: flask-app
         image: 537380924761.dkr.ecr.us-east-1.amazonaws.com/clo835-flask-app:latest
         ports:
-        - containerPort: 8080
+        - containerPort: 8081
         env:
         - name: BACKGROUND_IMAGE_URL
           valueFrom:
@@ -54,4 +54,4 @@ spec:
     app: flask-app
   ports:
   - port: 80
-    targetPort: 8080
+    targetPort: 8081
