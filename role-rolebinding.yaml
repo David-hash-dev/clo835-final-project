@@ -1,0 +1,23 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  namespace: fp
+  name: CLO835
+rules:
+- apiGroups: [""]
+  resources: ["namespaces"]
+  verbs: ["create", "get", "list", "watch"]
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: clo835-rolebinding
+  namespace: fp
+subjects:
+- kind: ServiceAccount
+  name: clo835-sa
+  namespace: fp
+roleRef:
+  kind: Role
+  name: CLO835
+  apiGroup: rbac.authorization.k8s.io

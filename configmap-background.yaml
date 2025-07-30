@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: background-config
+  namespace: fp
+data:
+  BACKGROUND_IMAGE_URL: "https://team-flask-app-bucket-835.s3.us-east-1.amazonaws.com/static/background.jpg"
