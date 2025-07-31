@@ -1,20 +1,24 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8" />
+  <title>{{ group_name }}</title>
   <style>
     body {
-      background-image: url("{{ url_for('static', filename='background.jpg') }}");
+      background-image: url("{{ background_image_url }}?v={{ cache_buster }}");
       background-size: cover;
       background-repeat: no-repeat;
+      background-position: center;
       color: black;
-      font-family: Arial, sans-serif;
+      text-shadow: 1px 1px 2px black;
+      font-family: sans-serif;
       text-align: center;
-      padding-top: 20%;
+      padding-top: 100px;
     }
   </style>
 </head>
 <body>
-  <h1>Your Group Name: {{ group_name }}</h1>
-  <p>Slogan: {{ group_slogan }}</p>
+  <h1>{{ group_name }}</h1>
+  <h2>{{ group_slogan }}</h2>
 </body>
 </html>
