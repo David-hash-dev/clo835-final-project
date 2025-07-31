@@ -39,7 +39,7 @@ spec:
           valueFrom:
             secretKeyRef:
               name: aws-credentials-secret
-              key: aws_session_token
+              key: AWS_SESSION_TOKEN
       imagePullSecrets:
       - name: ecr-pull-secret
 ---
