@@ -77,20 +77,20 @@ kubectl create secret docker-registry ecr-pull-secret \
   --docker-username=AWS \
   --docker-password=$(aws ecr get-login-password)
    
-6. 📦 Create RBAC, PVC, and Service Account
+6. Create RBAC, PVC, and Service Account
 kubectl apply -f serviceaccount.yaml
 kubectl apply -f role.yaml
 kubectl apply -f rolebinding.yaml
 kubectl apply -f pvc.yaml
 
-7. 🧱 Deploy MySQL and Flask App
+7.  Deploy MySQL and Flask App
 kubectl apply -f k8s/mysql-deployment.yaml
 kubectl apply -f k8s/mysql-service.yaml
 
 kubectl apply -f k8s/flask-deployment.yaml
 kubectl apply -f k8s/flask-service.yaml
 
-8. 🌐 Access the Web App
+8.  Access the Web App
 Find the NodePort or LoadBalancer service exposed and test via browser or curl:
 
 kubectl get svc -n fp
